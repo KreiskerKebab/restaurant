@@ -22,6 +22,7 @@ const hamburger = document.getElementById("hamburgerBtn");
 const mobileNav = document.getElementById("mobileNav");
 const overlay = document.querySelector(".mobile-overlay");
 const mobileCloseTriggers = document.querySelectorAll(MOBILE_CLOSE_SELECTOR);
+const mobileStickyCall = document.querySelector(".mobile-sticky-call");
 
 /**
  * Stores the last focused element before the mobile navigation opens so focus
@@ -97,6 +98,7 @@ function setMobileNavState(isOpen) {
   document.body.classList.toggle("nav-open", isOpen);
   hamburger.setAttribute("aria-expanded", toAriaBoolean(isOpen));
   mobileNav.setAttribute("aria-hidden", toAriaBoolean(!isOpen));
+  mobileNav.inert = !isOpen;
 }
 
 /**
@@ -159,6 +161,20 @@ function toggleMobileNav() {
 }
 
 window.toggleMobileNav = toggleMobileNav;
+setMobileNavState(false);
+
+/**
+ * Shows the compact mobile call bar only after the user has started scrolling,
+ * which keeps the first screen cleaner while preserving quick access later.
+ */
+function syncMobileStickyCall() {
+  if (!mobileStickyCall) {
+    return;
+  }
+
+  const shouldShow = window.innerWidth <= 768 && window.scrollY > 260;
+  document.body.classList.toggle("show-mobile-call", shouldShow);
+}
 
 window.addEventListener(
   "scroll",
@@ -170,9 +186,14 @@ window.addEventListener(
     if (!prefersReducedMotion && heroBg && window.scrollY < window.innerHeight) {
       heroBg.style.transform = `scale(1.05) translateY(${window.scrollY * 0.32}px)`;
     }
+
+    syncMobileStickyCall();
   },
   { passive: true }
 );
+
+window.addEventListener("load", syncMobileStickyCall);
+window.addEventListener("resize", syncMobileStickyCall);
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
@@ -302,43 +323,43 @@ const mobileAccordionSections = [
   {
     section: "#restaurant",
     title: "Notre histoire",
-    subtitle: "Un kebab moderne, un comptoir chaud et une vraie identite de quartier autour du geste et de la braise.",
+    subtitle: "Une adresse de quartier simple, chaude et bien ancree a Saint-Pol-de-Leon.",
     panelSelectors: [".resto-grid"],
     hasDesktopHeading: true,
   },
   {
     section: ".experience-section",
-    title: "Une table qui sent la braise, le pain chaud et la menthe fraiche.",
-    subtitle: "Une ambiance chaleureuse, des sauces maison et un rythme rapide qui laisse quand meme la place au confort.",
+    title: "Braise & menthe",
+    subtitle: "Une ambiance chaleureuse, plus lisible et plus calme sur smartphone.",
     kicker: "L'ambiance",
     panelSelectors: [".experience-layout"],
   },
   {
     section: "#carte",
     title: "La carte",
-    subtitle: "Kebabs, burgers, salades, accompagnements, desserts et boissons dans une lecture plus legere sur smartphone.",
+    subtitle: "Kebabs, burgers, salades et boissons dans une lecture vraiment plus legere.",
     panelSelectors: [".menu-highlight", ".menu-tabs-shell", ".signature-section", ".carte-note"],
     hasDesktopHeading: true,
   },
   {
     section: ".kitchen-section",
-    title: "La broche, la braise et les sauces maison.",
-    subtitle: "Broche, pains dores minute et sauces maison dans une section repliable sur mobile.",
+    title: "Broche minute",
+    subtitle: "Le geste, la plaque et les sauces maison sans surcharge visuelle.",
     kicker: "Le geste",
     panelSelectors: [".kitchen-grid"],
     hasDesktopHeading: true,
   },
   {
     section: "#galerie",
-    title: "Galerie",
-    subtitle: "Les placeholders du lieu, des assiettes et du service restent disponibles, sans allonger inutilement la page mobile.",
+    title: "Le lieu en images",
+    subtitle: "Facade, comptoir, assiettes et service dans une galerie plus fluide.",
     panelSelectors: [".galerie-grid"],
     hasDesktopHeading: true,
   },
   {
     section: "#contact",
-    title: "Localisation, horaires & contact",
-    subtitle: "Adresse, horaires, telephone, itineraire et liens utiles sans tout faire defiler sur mobile.",
+    title: "Venir & appeler",
+    subtitle: "Horaires, telephone et itineraire reunis dans un bloc direct.",
     panelSelectors: [".horaires-grid", ".contact-grid", ".map-card"],
     hasDesktopHeading: true,
   },
@@ -526,8 +547,9 @@ function setAccordionState(accordion, isOpen, animate = true) {
 }
 
 /**
- * Reconciles every accordion with the current viewport. On mobile the first
- * card opens by default, while desktop keeps all content visible.
+ * Reconciles every accordion with the current viewport. On mobile the cards
+ * stay closed by default for a cleaner first screen, while desktop keeps all
+ * content visible.
  */
 function syncMobileAccordions() {
   if (mobileAccordions.length === 0) {
@@ -535,8 +557,10 @@ function syncMobileAccordions() {
   }
 
   if (mobileAccordionMedia.matches) {
-    mobileAccordions.forEach((accordion, index) => {
-      const shouldOpen = accordion.dataset.userTouched ? accordion.dataset.open === ARIA_TRUE : index === 0;
+    mobileAccordions.forEach((accordion) => {
+      const shouldOpen = accordion.dataset.userTouched
+        ? accordion.dataset.open === ARIA_TRUE
+        : false;
       setAccordionState(accordion, shouldOpen, false);
     });
     return;
@@ -659,6 +683,7 @@ function enhanceDeferredMedia() {
 buildMobileAccordions();
 syncMobileAccordions();
 enhanceDeferredMedia();
+document.documentElement.classList.add("accordions-ready");
 
 // Accordion click handling is registered after creation because the buttons do
 // not exist in the original desktop DOM.

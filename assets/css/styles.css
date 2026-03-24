@@ -312,6 +312,21 @@ header.scrolled .hamburger span {
   text-align: center;
 }
 
+.mobile-nav .mobile-cta {
+  margin-top: 0.35rem;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  background: #6f1830;
+  color: #fff;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.mobile-nav .mobile-cta:hover,
+.mobile-nav .mobile-cta:focus-visible {
+  background: #5d1328;
+}
+
 .mobile-overlay {
   position: fixed;
   inset: 0;
@@ -859,7 +874,7 @@ section {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 }
 
-.menu-highlight h4 {
+.menu-highlight h3 {
   font-family: var(--font-display);
   color: #fff;
   font-size: 1.4rem;
@@ -2220,6 +2235,15 @@ footer {
     display: none;
   }
 
+  html.js:not(.accordions-ready) #restaurant .section-inner > :not(.desktop-section-head):not(.mobile-accordion),
+  html.js:not(.accordions-ready) .experience-section .section-inner > :not(.desktop-section-head):not(.mobile-accordion),
+  html.js:not(.accordions-ready) #carte .section-inner > :not(.desktop-section-head):not(.mobile-accordion),
+  html.js:not(.accordions-ready) .kitchen-section .section-inner > :not(.desktop-section-head):not(.mobile-accordion),
+  html.js:not(.accordions-ready) #galerie .section-inner > :not(.desktop-section-head):not(.mobile-accordion),
+  html.js:not(.accordions-ready) #contact .section-inner > :not(.desktop-section-head):not(.mobile-accordion) {
+    display: none;
+  }
+
   .mobile-accordion {
     margin: 0 0 1rem;
     border-radius: 28px;
@@ -2376,7 +2400,7 @@ footer {
     text-align: left;
   }
 
-  #carte .menu-highlight h4,
+  #carte .menu-highlight h3,
   #carte .menu-category h3,
   #carte .signature-heading h3,
   #carte .signature-card h4,
@@ -3882,5 +3906,164 @@ header.scrolled {
 
   .contact-overview-head h3 {
     color: var(--mobile-title);
+  }
+}
+
+/* ==================== MOBILE POLISH ==================== */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: calc(5.05rem + env(safe-area-inset-bottom));
+  }
+
+  header,
+  header.scrolled {
+    padding: calc(0.72rem + env(safe-area-inset-top)) 1rem 0.72rem;
+  }
+
+  .header-brand {
+    gap: 0.7rem;
+  }
+
+  .logo img {
+    width: 52px;
+    height: 52px;
+    box-shadow: 0 6px 18px rgba(20, 17, 15, 0.12);
+  }
+
+  .hamburger {
+    gap: 4px;
+    padding: 0.15rem;
+  }
+
+  .hamburger span {
+    width: 22px;
+  }
+
+  header .hamburger span,
+  header.scrolled .hamburger span {
+    background: var(--granit);
+  }
+
+  #restaurant {
+    padding-top: 5.65rem;
+  }
+
+  section {
+    scroll-margin-top: 5.65rem;
+  }
+
+  .mobile-accordion {
+    margin-bottom: 0.85rem;
+    border-radius: 24px;
+  }
+
+  .mobile-accordion-summary {
+    gap: 0.38rem;
+    padding: 1rem 3.4rem 1rem 1rem;
+  }
+
+  .mobile-accordion-summary::after {
+    right: 1rem;
+    width: 0.76rem;
+    height: 0.76rem;
+  }
+
+  .mobile-accordion-title {
+    max-width: 11ch;
+    font-size: clamp(1.55rem, 7vw, 2.2rem);
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  .mobile-accordion-subtitle {
+    max-width: 25ch;
+    font-size: 0.93rem;
+    line-height: 1.45;
+  }
+
+  .mobile-accordion-kicker {
+    font-size: 0.69rem;
+    letter-spacing: 0.14em;
+  }
+
+  .mobile-accordion-panel-inner {
+    padding: 0 1rem 1rem;
+  }
+
+  .mobile-accordion-panel-inner > * + * {
+    margin-top: 0.85rem;
+  }
+
+  .mobile-sticky-call {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: calc(0.65rem + env(safe-area-inset-bottom));
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding: 0.78rem 0.9rem;
+    border-radius: 18px;
+    background: rgba(245, 234, 217, 0.98);
+    border: 1px solid rgba(122, 31, 50, 0.12);
+    box-shadow: 0 12px 28px rgba(20, 17, 15, 0.16);
+    color: var(--granit);
+    opacity: 0;
+    transform: translateY(18px);
+    pointer-events: none;
+    transition: opacity 220ms ease, transform 220ms ease;
+  }
+
+  body.show-mobile-call .mobile-sticky-call {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-sticky-call-copy {
+    min-width: 0;
+    gap: 0.05rem;
+  }
+
+  .mobile-sticky-call-copy strong {
+    font-size: 0.88rem;
+    letter-spacing: 0.02em;
+  }
+
+  .mobile-sticky-call-copy small {
+    font-size: 0.62rem;
+    color: rgba(20, 17, 15, 0.64);
+    opacity: 1;
+  }
+
+  .mobile-sticky-call-number {
+    margin-left: auto;
+    font-size: 0.86rem;
+    color: var(--rose-signature);
+  }
+}
+
+@media (max-width: 540px) {
+  .mobile-sticky-call {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .mobile-accordion-title {
+    max-width: 10.5ch;
+    font-size: clamp(1.42rem, 7.2vw, 1.95rem);
+  }
+
+  .mobile-accordion-subtitle {
+    max-width: none;
+    font-size: 0.9rem;
+  }
+
+  .mobile-sticky-call-copy small {
+    display: none;
+  }
+
+  .mobile-sticky-call-number {
+    font-size: 0.82rem;
   }
 }
