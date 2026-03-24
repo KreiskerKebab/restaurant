@@ -2,20 +2,20 @@
 
 > Site vitrine statique du restaurant Kreisker Kebab.
 
-- URL principale: https://kreisker-kebab.fr/
-- Objet: presentation du lieu, du menu, des horaires, de la reservation et des informations pratiques
+- URL principale: https://kreiskerkebab.github.io/restaurant/
+- Objet: presentation du lieu, du menu, des horaires, du contact et des informations pratiques
 - Contact public: +33 6 95 22 19 46
 - Adresse affichee: 1 Rue Cadiou, 29250 Saint-Pol-de-Leon
 - Reseaux publics: Facebook + Tripadvisor
 
 ## Pages
 
-- / : accueil, histoire, menu, galerie, localisation, horaires, reservation
+- / : accueil, histoire, menu, galerie, localisation, horaires, contact
 - /mentions-legales.html : informations legales et credits placeholders
-- /politique-confidentialite.html : informations sur le formulaire local et les liens externes
+- /politique-confidentialite.html : informations sur les liens externes
 
 ## Donnees importantes
 
 - Les visuels integres sont des placeholders SVG documentes dans `assets/images/INDEX.md`.
-- Le formulaire de reservation n'envoie rien a un serveur : il prepare un recapitulatif local, copiable puis a confirmer par telephone ou Facebook.
+- Le site ne stocke pas de demandes : le contact se fait directement par telephone ou via les plateformes externes.
 - Le site est pense pour un hebergement statique rapide.

@@ -1,8 +1,9 @@
 {
   "name": "Kreisker Kebab",
   "short_name": "Kreisker",
-  "description": "Kebab franc-turc moderne : broche maison, sauces minute, burgers, salades et reservation simple.",
+  "description": "Kebab franc-turc moderne : broche maison, sauces minute, burgers, salades et contact direct.",
   "start_url": "./",
+  "scope": "/restaurant/",
   "display": "standalone",
   "background_color": "#14110f",
   "theme_color": "#7a1f32",

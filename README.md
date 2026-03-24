@@ -11,7 +11,7 @@ Le site couvre aujourd'hui :
 - menu complet par categories
 - galerie photo avec placeholders documentes
 - horaires, localisation et carte embarquee
-- formulaire de reservation front-end
+- contact direct
 - mentions legales
 - politique de confidentialite
 - PWA minimale (`manifest.json`, favicons)
@@ -24,7 +24,7 @@ Le site couvre aujourd'hui :
 - `mentions-legales.html` : page legale
 - `politique-confidentialite.html` : page de confidentialite
 - `assets/css/styles.css` : styles globaux
-- `assets/js/main.js` : interactions, menu mobile, reveals, accordions mobiles, reservation locale
+- `assets/js/main.js` : interactions, menu mobile, reveals et accordions mobiles
 - `assets/images/` : placeholders SVG et consignes de remplacement
 - `assets/images/INDEX.md` : brief image par image
 - `robots.txt` : directives crawl
@@ -52,4 +52,4 @@ http://127.0.0.1:4173
 
 - Les coordonnees publiques affichees reprennent les informations visibles sur Tripadvisor et Facebook au 24 mars 2026.
 - Les visuels du dossier `assets/images/` sont des placeholders SVG remplacables, deja nommes selon leur usage dans la page.
-- Le formulaire de reservation reste 100 % front-end : il prepare un recapitulatif local, copiable puis a confirmer par telephone ou Facebook.
+- Le site est maintenant pense comme une vitrine simple : appel, Facebook, Tripadvisor et itineraire.
