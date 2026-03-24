@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Placeholder hero kebab">
+  <defs>
+    <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120d0c"/>
+      <stop offset="55%" stop-color="#7a1f32"/>
+      <stop offset="100%" stop-color="#c8a04d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#hero-bg)"/>
+  <circle cx="1240" cy="180" r="180" fill="rgba(137,210,178,0.16)"/>
+  <circle cx="320" cy="760" r="220" fill="rgba(245,234,217,0.08)"/>
+  <ellipse cx="930" cy="470" rx="160" ry="230" fill="rgba(245,234,217,0.22)"/>
+  <ellipse cx="935" cy="490" rx="112" ry="210" fill="rgba(200,160,77,0.72)"/>
+  <path d="M836 654c74-36 204-36 276 0-36 64-94 98-138 98-52 0-102-30-138-98z" fill="#14110f"/>
+  <path d="M690 620c66-34 142-32 222 8-58 26-116 40-176 42-24-8-42-24-46-50z" fill="rgba(245,234,217,0.9)"/>
+  <text x="110" y="162" font-family="Verdana, sans-serif" font-size="28" letter-spacing="10" fill="#89d2b2">RESTO KEBAB</text>
+  <text x="110" y="274" font-family="Georgia, serif" font-size="96" font-weight="700" fill="#f5ead9">Placeholder hero</text>
+  <text x="110" y="350" font-family="Verdana, sans-serif" font-size="34" fill="#f5ead9">
+    <tspan x="110" dy="0">Broche de kebab doree, pain chaud ouvert, vapeur legere,</tspan>
+    <tspan x="110" dy="44">ambiance bordeaux sombre, eclats or et touches menthe.</tspan>
+  </text>
+</svg>

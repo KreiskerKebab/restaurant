@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Placeholder broche">
+  <defs>
+    <linearGradient id="broche-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c0b"/>
+      <stop offset="48%" stop-color="#67202d"/>
+      <stop offset="100%" stop-color="#c8a04d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#broche-bg)"/>
+  <rect x="436" y="244" width="28" height="564" rx="14" fill="rgba(245,234,217,0.72)"/>
+  <ellipse cx="450" cy="560" rx="142" ry="284" fill="rgba(200,160,77,0.9)"/>
+  <path d="M574 404l126-70 42 76-130 66z" fill="rgba(245,234,217,0.54)"/>
+  <circle cx="700" cy="202" r="72" fill="rgba(137,210,178,0.22)"/>
+  <text x="84" y="142" font-family="Verdana, sans-serif" font-size="22" letter-spacing="8" fill="#89d2b2">PLACEHOLDER</text>
+  <text x="84" y="232" font-family="Georgia, serif" font-size="74" font-weight="700" fill="#f5ead9">Broche</text>
+  <text x="84" y="320" font-family="Verdana, sans-serif" font-size="28" fill="#f5ead9">
+    <tspan x="84" dy="0">Gros plan sur la broche en cuisson,</tspan>
+    <tspan x="84" dy="38">couteau ou pelle en action,</tspan>
+    <tspan x="84" dy="38">reflets or et vapeur legere.</tspan>
+  </text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Placeholder sauces">
+  <defs>
+    <linearGradient id="sauces-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140f0e"/>
+      <stop offset="50%" stop-color="#61202a"/>
+      <stop offset="100%" stop-color="#89d2b2"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#sauces-bg)"/>
+  <circle cx="248" cy="734" r="106" fill="rgba(245,234,217,0.9)"/>
+  <circle cx="456" cy="700" r="106" fill="rgba(200,160,77,0.84)"/>
+  <circle cx="654" cy="734" r="106" fill="rgba(137,210,178,0.84)"/>
+  <rect x="168" y="860" width="548" height="96" rx="20" fill="rgba(20,17,15,0.46)"/>
+  <text x="84" y="142" font-family="Verdana, sans-serif" font-size="22" letter-spacing="8" fill="#f5ead9">PLACEHOLDER</text>
+  <text x="84" y="232" font-family="Georgia, serif" font-size="74" font-weight="700" fill="#f5ead9">Sauces</text>
+  <text x="84" y="320" font-family="Verdana, sans-serif" font-size="28" fill="#f5ead9">
+    <tspan x="84" dy="0">Trio de sauces maison, herbes fraiches,</tspan>
+    <tspan x="84" dy="38">epices et condiments alignes</tspan>
+    <tspan x="84" dy="38">sur un plan de travail noir mat.</tspan>
+  </text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Placeholder comptoir">
+  <defs>
+    <linearGradient id="counter-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2b1618"/>
+      <stop offset="52%" stop-color="#7a1f32"/>
+      <stop offset="100%" stop-color="#d9c1a0"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#counter-bg)"/>
+  <rect x="72" y="640" width="756" height="280" rx="24" fill="rgba(20,17,15,0.68)"/>
+  <rect x="122" y="400" width="270" height="182" rx="18" fill="rgba(245,234,217,0.16)"/>
+  <rect x="450" y="264" width="192" height="388" rx="96" fill="rgba(245,234,217,0.22)"/>
+  <rect x="474" y="290" width="144" height="340" rx="72" fill="rgba(200,160,77,0.82)"/>
+  <circle cx="710" cy="184" r="84" fill="rgba(137,210,178,0.22)"/>
+  <text x="90" y="142" font-family="Verdana, sans-serif" font-size="22" letter-spacing="8" fill="#89d2b2">PLACEHOLDER</text>
+  <text x="90" y="232" font-family="Georgia, serif" font-size="74" font-weight="700" fill="#f5ead9">Comptoir</text>
+  <text x="90" y="322" font-family="Verdana, sans-serif" font-size="28" fill="#f5ead9">
+    <tspan x="90" dy="0">Vue portrait du comptoir principal :</tspan>
+    <tspan x="90" dy="38">broche visible, matieres chaudes,</tspan>
+    <tspan x="90" dy="38">touches menthe et details de service.</tspan>
+  </text>
+</svg>

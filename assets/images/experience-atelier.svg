@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-label="Placeholder assiette">
+  <defs>
+    <linearGradient id="atelier-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14110f"/>
+      <stop offset="52%" stop-color="#4d1721"/>
+      <stop offset="100%" stop-color="#c8a04d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#atelier-bg)"/>
+  <circle cx="456" cy="710" r="238" fill="rgba(245,234,217,0.88)"/>
+  <path d="M330 670c88-36 166-40 248-4-24 86-78 130-124 130-60 0-106-46-124-126z" fill="rgba(200,160,77,0.84)"/>
+  <circle cx="288" cy="610" r="22" fill="#89d2b2"/>
+  <circle cx="626" cy="592" r="18" fill="#89d2b2"/>
+  <circle cx="474" cy="550" r="16" fill="#7a1f32"/>
+  <text x="86" y="144" font-family="Verdana, sans-serif" font-size="22" letter-spacing="8" fill="#89d2b2">PLACEHOLDER</text>
+  <text x="86" y="234" font-family="Georgia, serif" font-size="74" font-weight="700" fill="#f5ead9">Assiette</text>
+  <text x="86" y="322" font-family="Verdana, sans-serif" font-size="28" fill="#f5ead9">
+    <tspan x="86" dy="0">Finition minute d'une assiette ou d'un plateau :</tspan>
+    <tspan x="86" dy="38">sauces versees, herbes fraiches,</tspan>
+    <tspan x="86" dy="38">viande tranchee et crudites nettes.</tspan>
+  </text>
+</svg>
