@@ -1036,19 +1036,17 @@ section {
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .menu-tab:hover {
-  transform: translateY(-1px);
   border-color: rgba(255, 255, 255, 0.38);
 }
 
 .menu-tab.is-active {
   background: var(--rose-signature);
   color: #fff;
-  border-color: transparent;
-  box-shadow: 0 16px 28px rgba(239, 46, 171, 0.24);
+  border-color: rgba(122, 31, 50, 0.92);
 }
 
 .menu-panels {
@@ -2641,8 +2639,8 @@ footer {
   #carte .menu-tab.is-active {
     background: var(--mobile-rose);
     color: #fff;
-    border-color: transparent;
-    box-shadow: 0 10px 18px rgba(180, 35, 107, 0.18);
+    border-color: rgba(180, 35, 107, 0.92);
+    box-shadow: none;
   }
 
   #carte .signature-quality-list span,
@@ -3045,7 +3043,7 @@ header nav .btn-reserve-nav {
 }
 
 .menu-tab.is-active {
-  box-shadow: 0 16px 28px rgba(122, 31, 50, 0.28);
+  box-shadow: none;
 }
 
 .formula-price-badge {
