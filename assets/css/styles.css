@@ -3682,10 +3682,10 @@ section {
 
 header,
 header.scrolled {
-  background: rgba(245, 234, 217, 0.98);
-  box-shadow: 0 10px 30px rgba(20, 17, 15, 0.08);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background: var(--blanc-ecume);
+  box-shadow: 0 1px 0 rgba(27, 22, 18, 0.06);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 .header-brand {
@@ -3696,6 +3696,36 @@ header.scrolled {
 }
 
 .logo {
+  color: var(--ardoise);
+}
+
+header nav a,
+header:not(.scrolled) nav a,
+header.scrolled nav a {
+  color: var(--ardoise);
+  text-shadow: none;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+  color: var(--granit);
+}
+
+header nav .btn-reserve-nav,
+header:not(.scrolled) .btn-reserve-nav,
+header.scrolled .btn-reserve-nav {
+  background: rgba(200, 160, 77, 0.2);
+  color: var(--ardoise);
+  border: 1px solid rgba(122, 31, 50, 0.12);
+  box-shadow: none;
+}
+
+header nav .btn-reserve-nav:hover,
+header nav .btn-reserve-nav:focus-visible,
+header:not(.scrolled) .btn-reserve-nav:hover,
+header.scrolled .btn-reserve-nav:hover,
+header.scrolled .btn-reserve-nav:focus-visible {
+  background: rgba(200, 160, 77, 0.3);
   color: var(--ardoise);
 }
 
@@ -3918,6 +3948,8 @@ header.scrolled {
   header,
   header.scrolled {
     padding: calc(0.72rem + env(safe-area-inset-top)) 1rem 0.72rem;
+    background: var(--blanc-ecume);
+    box-shadow: 0 1px 0 rgba(27, 22, 18, 0.06);
   }
 
   .header-brand {
