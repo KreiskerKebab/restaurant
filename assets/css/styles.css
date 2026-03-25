@@ -2978,14 +2978,14 @@ header nav .btn-reserve-nav {
 
 .kitchen-section {
   background:
-    radial-gradient(circle at top right, rgba(137, 210, 178, 0.08), transparent 28%),
-    linear-gradient(180deg, #fffaf4 0%, var(--sable) 100%);
+    radial-gradient(circle at top right, rgba(200, 160, 77, 0.08), transparent 28%),
+    linear-gradient(180deg, var(--blanc-ecume) 0%, var(--blanc-ecume) 100%);
 }
 
 #galerie {
   background:
     radial-gradient(circle at top left, rgba(122, 31, 50, 0.12), transparent 30%),
-    linear-gradient(180deg, var(--sable) 0%, #f7efe2 100%);
+    linear-gradient(180deg, var(--blanc-ecume) 0%, #f7efe2 100%);
 }
 
 .galerie-item::after {
