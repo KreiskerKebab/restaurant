@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" role="img" aria-labelledby="header-logo-title header-logo-desc">
+  <title id="header-logo-title">Logo header Kreisker Kebab</title>
+  <desc id="header-logo-desc">Enseigne rectangulaire rouge avec le mot Kebab, Kreisker, un wrap stylise et la silhouette du Kreisker.</desc>
+  <defs>
+    <linearGradient id="header-sign-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8f1122"/>
+      <stop offset="55%" stop-color="#b51629"/>
+      <stop offset="100%" stop-color="#d42838"/>
+    </linearGradient>
+    <linearGradient id="header-sign-shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="header-shadow" x="-8%" y="-8%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#5c0b17" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#header-shadow)">
+    <rect x="8" y="18" width="504" height="304" fill="url(#header-sign-red)"/>
+    <path d="M22 34c96-34 198-34 315 1 76 22 134 21 164-6v112c-35 22-91 36-170 39-129 5-231-13-309-54Z" fill="url(#header-sign-shine)"/>
+  </g>
+
+  <g fill="#fff">
+    <text x="48" y="118" font-family="Segoe Script, Brush Script MT, Lucida Handwriting, cursive" font-size="98" font-weight="700" letter-spacing="-2">Kebab</text>
+    <text x="70" y="173" font-family="Arial Black, Arial, sans-serif" font-size="50" font-weight="900" letter-spacing="3">KREISKER</text>
+  </g>
+
+  <g transform="translate(74 116)">
+    <path d="M18 196h30l8-45 10 45h20l11-66 12 66h17l7-28 6 28h28l11-91 14 91h12l5-20 5 20h21v-71l19-21 19 21v71h16v-30h10l7-79 8 79h11v-17h10v-63l15-23 15 23v63h24v25H18Z" fill="#fff" opacity="0.98"/>
+  </g>
+
+  <g transform="translate(128 142) rotate(-16 96 100)">
+    <path d="M58 20C81 4 120 6 144 28c17 15 24 37 20 59l-22 102c-5 25-29 42-55 40l-27-1c-31-2-54-31-50-62l19-99c4-19 14-35 29-47Z" fill="#fff"/>
+    <path d="M70 34c17-12 45-14 65-2 14 8 19 25 16 42l-19 101c-3 18-19 31-37 30l-24-1c-21-1-38-21-35-42l19-96c2-13 8-24 15-32Z" fill="#b51629"/>
+    <path d="M74 53c12-14 33-21 53-18 17 2 28 11 31 23l-4 32c-14-13-34-20-57-19-14 1-28 6-39 15l-2-20c-1-5 5-10 18-13Z" fill="#fff"/>
+    <path d="M89 74c-9 8-10 21-2 29 7 7 19 7 27 0 8-7 8-18 1-25-7-8-21-8-26 0Zm11 7c4-4 11-4 15 0 4 4 4 9 0 13-3 4-10 4-14 0-4-4-5-9-1-13Z" fill="#b51629"/>
+    <path d="M118 74c-10 8-11 21-3 30 8 8 20 8 28 1 8-7 8-19 0-28-7-8-18-9-25-3Zm10 8c4-4 11-4 15 0 4 4 4 10 0 14-3 4-10 4-14 0-4-4-5-10-1-14Z" fill="#b51629"/>
+    <rect x="66" y="109" width="59" height="13" rx="6.5" fill="#fff"/>
+    <rect x="60" y="141" width="68" height="13" rx="6.5" fill="#fff"/>
+    <rect x="55" y="173" width="61" height="13" rx="6.5" fill="#fff"/>
+  </g>
+</svg>
