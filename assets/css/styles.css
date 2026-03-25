@@ -147,11 +147,10 @@ header.scrolled {
 }
 
 .logo img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  display: block;
+  width: 124px;
+  height: auto;
+  filter: drop-shadow(0 8px 16px rgba(20, 17, 15, 0.18));
 }
 
 .logo picture {
@@ -2230,8 +2229,8 @@ footer {
   }
 
   .logo img {
-    width: 58px;
-    height: 58px;
+    width: 114px;
+    height: auto;
   }
 
   .resto-grid,
@@ -4051,9 +4050,9 @@ header.scrolled .btn-reserve-nav:focus-visible {
   }
 
   .logo img {
-    width: 52px;
-    height: 52px;
-    box-shadow: 0 6px 18px rgba(20, 17, 15, 0.12);
+    width: 102px;
+    height: auto;
+    filter: drop-shadow(0 6px 12px rgba(20, 17, 15, 0.14));
   }
 
   .hamburger {
