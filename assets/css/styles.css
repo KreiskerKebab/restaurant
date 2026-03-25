@@ -653,6 +653,16 @@ section {
   background: var(--blanc-ecume);
 }
 
+@media (min-width: 769px) {
+  #restaurant .restaurant-intro {
+    display: none;
+  }
+
+  #restaurant .restaurant-intro + .resto-grid {
+    margin-top: 0.75rem;
+  }
+}
+
 .resto-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
